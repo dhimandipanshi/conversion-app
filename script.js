@@ -7,6 +7,8 @@ const outputAmount = document.getElementById("outputAmount");
 const toggleButton = document.getElementById("toggleButton");
 const convertButton = document.getElementById("convertButton");
 const resultContainer = document.getElementById("result");
+const currencyFlagInputValue = document.getElementById("currencyFlagInputValue");
+const currencyFlagOutputValue = document.getElementById("currencyFlagOutputValue");
 const conversionFactorContainer = document.getElementById("conversionFactor");
 
 let isCadToUsd = true; // Flag to track current conversion mode
@@ -26,11 +28,11 @@ updateConversionFactor();
 // Function to update placeholder text based on conversion mode
 function updatePlaceholders() {
     if (isCadToUsd) {
-        inputAmount.placeholder = "Enter amount";
-        outputAmount.placeholder = "Converted amount";
+        currencyFlagInputValue.innerText = "🇨🇦 CAD";
+        currencyFlagOutputValue.innerText = "🇺🇸 USD";
     } else {
-        inputAmount.placeholder = "Enter amount";
-        outputAmount.placeholder = "Converted amount";
+        currencyFlagInputValue.innerText = "🇺🇸 USD";
+        currencyFlagOutputValue.innerText = "🇨🇦 CAD";
     }
 }
 
