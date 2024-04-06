@@ -26,14 +26,21 @@ function updateConversionFactor() {
 updateConversionFactor();
 
 // Function to update placeholder text based on conversion mode
-function updatePlaceholders() {
+function updateFlag() {
     if (isCadToUsd) {
-        currencyFlagInputValue.innerText = "🇨🇦 CAD";
-        currencyFlagOutputValue.innerText = "🇺🇸 USD";
+        currencyFlagInputValue.innerText = "CAD";
+        currencyFlagOutputValue.innerText = "USD";
     } else {
-        currencyFlagInputValue.innerText = "🇺🇸 USD";
-        currencyFlagOutputValue.innerText = "🇨🇦 CAD";
+        currencyFlagInputValue.innerText = "USD";
+        currencyFlagOutputValue.innerText = "CAD";
     }
+}
+
+// Initially update placeholders
+updateFlag();
+
+function updatePlaceholders() {
+    
 }
 
 // Initially update placeholders
@@ -57,8 +64,10 @@ toggleButton.addEventListener("click", function() {
     } else {
         toggleButton.innerText = "USD to CAD";
     }
-    updatePlaceholders(); // Update placeholders after toggling
+    updateFlag(); // Update placeholders after toggling
     updateConversionFactor(); // Update conversion factor text
+    resultContainer.innerText = "";
+    updatePlaceholders();
 });
 
 // Function to handle convert button click
