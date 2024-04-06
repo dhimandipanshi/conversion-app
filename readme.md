@@ -9,3 +9,5 @@ Toggle between conversion directions
 Responsive design for seamless use on desktops, laptops, tablets, and mobile phones
 User-friendly interface with intuitive input fields and buttons
 Enhanced user experience with country flags representing currencies
+
+![Alt text](image.png)
