@@ -5,15 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include Google Fonts stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
 </head>
 <body>
-    <h2>Currency Converter</h2>
+    <nav class="navbar">
+        <h2>Currency Converter</h2>
+    </nav>
     <div id="converter-container">
-        <input type="number" id="cadInput" placeholder="Enter CAD">
-        <button onclick="cadToUsd()">Convert to USD</button>
-        <input type="number" id="usdInput" placeholder="Enter USD">
-        <button onclick="usdToCad()">Convert to CAD</button>
+        <div class="input-with-flag">
+            <input type="number" id="inputAmount" placeholder="Enter amount">
+            <button class="currency-flag">🇨🇦 CAD</button>
+        </div>
+        <button id="toggleButton" class="toggle-button">CAD to USD</button>
+        <div class="input-with-flag">
+            <input type="text" id="outputAmount" placeholder="Converted amount">
+            <button class="currency-flag">🇺🇸 USD</button>
+        </div>
+        
     </div>
+    <div class="conversion-factor" id="conversionFactor"></div>
+    <button id="convertButton">Convert</button>
     <div id="result-container">
         <p id="result"></p>
     </div>
