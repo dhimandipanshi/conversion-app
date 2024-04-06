@@ -39,12 +39,6 @@ function updateFlag() {
 // Initially update placeholders
 updateFlag();
 
-function updatePlaceholders() {
-    
-}
-
-// Initially update placeholders
-updatePlaceholders();
 
 // Function to convert from CAD to USD
 function convertCadToUsd(amount) {
@@ -67,7 +61,6 @@ toggleButton.addEventListener("click", function() {
     updateFlag(); // Update placeholders after toggling
     updateConversionFactor(); // Update conversion factor text
     resultContainer.innerText = "";
-    updatePlaceholders();
 });
 
 // Function to handle convert button click
